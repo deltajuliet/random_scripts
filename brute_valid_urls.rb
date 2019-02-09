@@ -18,7 +18,7 @@ puts ""
 puts "Testing URLs now!"
 puts ""
 
-#Determines if a URL links to a valid hold request
+#Determines if a URL links to a valid page
 def valid_url?(url)
   resp =  Curl.get  url
 
@@ -29,18 +29,18 @@ def valid_url?(url)
   end
 end
 
-#Build a possible URL for a legal hold request based on the suffix given
+#Build a possible URL based on the suffix given
 def build_url(url_suffix)
   return @base_url+url_suffix
 end
 
-#Builds an array of possible characters to create random hold request id's from
+#Builds an array of possible characters to create paths from
 @possible_chars = []
 @possible_chars.concat Array('a' .. 'z')
 @possible_chars.concat Array('A' .. 'Z')
 @possible_chars.concat Array('0' .. '9')
 
-#Build possible suffixs for a legal hold
+#Build possible suffixs for valid pages
 def build_suffix(id_length = 16)
   possible_suffix = ""
 
