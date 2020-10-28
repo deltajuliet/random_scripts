@@ -1,5 +1,4 @@
-#Test code to find valid URL's through forceful browsing and random guessing of a given URL with a 16 digit random url.
-
+# Test code to find valid URL's through forceful browsing and random guessing of a given URL with a 16 digit random url.
 # Created by Dan Jones
 
 require 'curb'
